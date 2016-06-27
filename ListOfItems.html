@@ -14,5 +14,14 @@
 <br>
     <button onclick="addItems()"> Add Item  </button>
         <input type="text" id="inputItems"/>
+<script>
+    function addItems() {
+        let  text = document.getElementById('inputItems').value;
+        var itemsUL = document.createElement('items');
+        let newElement = document.createElement('li');
+        newElement.appendChild(document.createTextNode(text));
+        document.getElementById("items").appendChild(newElement);
+    }
+</script>
 </body>
 </html>
