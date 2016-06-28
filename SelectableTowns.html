@@ -18,11 +18,26 @@
     </h2>
 </ul>
 <br>
-<button onclick="selected()">Select</button>
+<button id="selected">Add</button>
 <script>
     $('li').click(function () {
-        $(this).css('background','red')
+       let li = $(this);
+        if(! li.attr('data-selected')){
+            li.css('background','purple')
+            li.attr('data-selected', 'true')
+        }
+        else{
+         li.css('background','')
+            li.removeAttr('data-selected')
+        }
     })
+    $('#selected').click(function () {
+        let selectedTowns = $('li[data-selected=true]')
+        let towns = [];
+        for(let t of selectedTowns)
+            towns.push(t.innerText)
+           $('body').append(towns.join(' ,'))
+            })
 </script>
 </body>
 </html>
