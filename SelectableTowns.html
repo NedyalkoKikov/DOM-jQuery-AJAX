@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Towns</title>
+    <h1>Selectable Towns</h1>
+    <script src ="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <style>
+        li{display: inline-block;padding: 10px}
+    </style>
+</head>
+<body>
+<ul id="items">
+    <h2>
+        <li>Sofia</li>
+        <li>Varna</li>
+        <li>Ruse</li>
+    </h2>
+</ul>
+<br>
+<button onclick="selected()">Select</button>
+<script>
+    $('li').click(function () {
+        $(this).css('background','red')
+    })
+</script>
+</body>
+</html>
